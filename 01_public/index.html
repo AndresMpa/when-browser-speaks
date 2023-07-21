@@ -9,36 +9,93 @@
     <title>Audio to text</title>
   </head>
   <body>
-    <nav>
-      <figure>
-        <img src="./asset/microphone.png" alt="microphone" />
-        <figcaption>The recorder</figcaption>
+    <nav class="navigator">
+      <figure class="icon">
+        <img
+          class="icon--image"
+          src="./asset/microphone.png"
+          alt="microphone"
+        />
+        <figcaption class="icon--title">The recorder</figcaption>
       </figure>
 
-      <ul>
-        <li>Recorder</li>
-        <li>Text</li>
-        <li>Description</li>
-        <li>About</li>
+      <ul class="drawer">
+        <li class="drawer--item">Recorder</li>
+        <li class="drawer--item">Text</li>
+        <li class="drawer--item">Description</li>
+        <li class="drawer--item">About</li>
       </ul>
 
-      <button>
-        <figure>
-          <img src="" alt="" />
-          <figcaption>Settings</figcaption>
+      <button class="button">
+        <figure class="button--setting">
+          <img
+            class="button--setting--image"
+            src="./asset/settings.svg"
+            alt="Settings"
+          />
+          <figcaption class="button--setting--label">Settings</figcaption>
         </figure>
       </button>
     </nav>
 
     <main id="app"></main>
 
-    <footer>
-      <span>
-        <a target="_blank" href="https://icons8.com/icon/364/settings"
-          >Settings</a
-        >
-        icon by <a target="_blank" href="https://icons8.com">Icons8</a>
-      </span>
+    <footer class="footer">
+      <article class="credits">
+        <h3 class="credits--title">Credits</h3>
+        <p class="credits--content">
+          Made by:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa"
+          >
+            AndresMpa
+          </a>
+        </p>
+
+        <p class="credits--content">
+          Project:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa/magic-ball-workshop"
+          >
+            magic-ball-workshop
+          </a>
+        </p>
+
+        <p class="credits--content">
+          Contact:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://www.linkedin.com/in/andresmpa/"
+          >
+            Andres M. Prieto Álvarez
+          </a>
+        </p>
+      </article>
+      <article class="credits">
+        <h3 class="credits--title">Thanks to</h3>
+        <span class="credits--content">
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://icons8.com/icon/364/settings"
+          >
+            Settings
+          </a>
+          icon by
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://icons8.com"
+          >
+            Icons8
+          </a>
+        </span>
+      </article>
     </footer>
   </body>
 </html>
