@@ -9,7 +9,7 @@ en este workshop:
 
 ## Temas
 
-- [La estructura del proyecto](./structure/)
+- [La estructura del proyecto](./00_structure/)
 
 - [La base de codigo de HTML + CSS](./)
 
