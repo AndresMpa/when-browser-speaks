@@ -25,4 +25,29 @@ a {
   background: #0125eb;
 }
 
+.icon {
+  display: flex;
+}
+.icon .icon--image {
+  width: 35px;
+}
+.icon .icon--title {
+  font-family: "Nunito", sans-serif;
+}
+
+.navigator {
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
+
+.credits .credits--content {
+  padding: 5vw;
+}
+.footer {
+  display: flex;
+  margin: 15px;
+  justify-content: space-around;
+}
+
 /*# sourceMappingURL=main.css.map */
