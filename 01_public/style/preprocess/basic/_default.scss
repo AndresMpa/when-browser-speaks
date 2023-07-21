@@ -1,0 +1,25 @@
+@use "colorPalette" as *;
+@use "fonts" as *;
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: $letter;
+  overflow-anchor: none;
+  font-family: $font-text;
+}
+
+body {
+  background-color: $background;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $links;
+}
