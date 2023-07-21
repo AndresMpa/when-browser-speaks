@@ -1,0 +1,14 @@
+{
+  "name": "01_public",
+  "version": "1.0.0",
+  "description": "Template para la estructura del paso 01 \"public\" que corresponde con el frontend",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "template",
+    "frontend"
+  ],
+  "author": "AndresMpa",
+  "license": "ISC"
+}
