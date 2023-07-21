@@ -1,0 +1,12 @@
+{
+  "name": "structure",
+  "version": "1.0.0",
+  "description": "Esta es la estructura base que se va a seguir en el workshop",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "template"
+  ],
+  "author": "AndresMpa",
+  "license": "ISC"
+}
