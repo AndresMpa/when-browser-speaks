@@ -1,6 +1,11 @@
+@import "../basic/fonts";
+
 .icon {
+  display: flex;
   .icon--image {
+    width: 35px;
   }
   .icon--title {
+    font-family: $font-title;
   }
 }

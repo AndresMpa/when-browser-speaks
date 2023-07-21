@@ -1,0 +1,9 @@
+@import "icon";
+@import "drawer";
+@import "button";
+
+.navigator {
+  display: flex;
+  margin: 5px;
+  justify-content: space-between;
+}
