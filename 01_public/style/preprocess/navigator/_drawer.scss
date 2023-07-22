@@ -1,4 +1,24 @@
+@import "../basic/colorPalette";
+@import "../basic/breackPoints";
+
 .drawer {
+  display: flex;
+  justify-content: space-around;
   .drawer--item {
+    display: inline-block;
+    position: relative;
+
+    padding: 0 5px;
+    margin: auto 0px;
+    min-width: 100px;
+
+    text-align: center;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .drawer {
+    display: none;
   }
 }
