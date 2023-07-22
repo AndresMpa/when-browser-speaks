@@ -1,7 +1,13 @@
+@import "../basic/colorPalette";
 @import "credits";
+@import "sentence";
 
 .footer {
   display: flex;
-  margin: 15px;
+  flex-wrap: wrap;
+  margin: 15px auto 0px;
   justify-content: space-around;
+  &>* {
+    flex: 0 0 50%;
+  }
 }

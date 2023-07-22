@@ -21,33 +21,110 @@ a {
   color: #0ca2eb;
 }
 
-.box-border-1-4 {
+.bg-main {
   background: #0125eb;
+}
+
+.links:after {
+  content: "";
+  transition: transform 0.25s ease-out;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  position: absolute;
+  width: 60%;
+  height: 2px;
+  left: 15px;
+  bottom: -5px;
+  background-color: #0ca2eb;
+}
+.links:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .icon {
   display: flex;
+  align-items: center;
 }
 .icon .icon--image {
-  width: 35px;
+  width: 50px;
+  height: 50px;
 }
 .icon .icon--title {
   font-family: "Nunito", sans-serif;
 }
 
+.drawer {
+  display: flex;
+  justify-content: space-around;
+}
+.drawer .drawer--item {
+  display: inline-block;
+  position: relative;
+  padding: 0 5px;
+  margin: auto 0px;
+  min-width: 100px;
+  text-align: center;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    display: none;
+  }
+}
+.button {
+  border: solid black 1px;
+  cursor: pointer;
+  background: none;
+  border-radius: 15px;
+  margin: 0px 15px;
+  padding: 0px 15px;
+}
+.button .button--setting {
+  display: flex;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+.button .button--setting .button--setting--image {
+  width: 20px;
+  height: 20px;
+}
+.button .button--setting .button--setting--label {
+  margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+  .button .button--setting .button--setting--label {
+    display: none;
+  }
+}
 .navigator {
   display: flex;
-  margin: 5px;
+  margin-bottom: 10px;
+  padding: 8px 8px 0px 8px;
   justify-content: space-between;
 }
 
-.credits .credits--content {
-  padding: 5vw;
+.credits .credits--title {
+  margin: 0 0 0 50px;
 }
+.credits .credits--content {
+  padding: 5vh 5vw;
+}
+.sentence .sentence--label {
+  text-align: center;
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+}
+
 .footer {
   display: flex;
-  margin: 15px;
+  flex-wrap: wrap;
+  margin: 15px auto 0px;
   justify-content: space-around;
+}
+.footer > * {
+  flex: 0 0 50%;
 }
 
 /*# sourceMappingURL=main.css.map */
