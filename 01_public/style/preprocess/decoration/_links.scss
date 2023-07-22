@@ -1,0 +1,24 @@
+@import "../basic/fonts";
+
+.links {
+  &:after {
+    content: "";
+
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    position: absolute;
+
+    width: 60%;
+    height: 2px;
+
+    left: 15px;
+    bottom: -5px;
+
+    background-color: $links;
+  }
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
