@@ -1,8 +1,33 @@
+@import "../basic/colorPalette";
+@import "../basic/breackPoints";
+
 .button {
+  border: solid black 1px;
+  cursor: pointer;
+  background: none;
+  border-radius: 15px;
+  margin: 0px 15px;
+  padding: 0px 15px;
   .button--setting {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
     .button--setting--image {
+      width: 20px;
+      height: 20px;
     }
     .button--setting--label {
+      margin-right: 5px;
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .button {
+    .button--setting {
+      .button--setting--label {
+        display: none;
+      }
     }
   }
 }
