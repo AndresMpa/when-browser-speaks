@@ -11,17 +11,17 @@ en este workshop:
 
 - [La estructura del proyecto](./00_structure/)
 
-- [La base de codigo de HTML + CSS](./)
+- [La base de codigo de HTML + CSS](./01_public/)
 
-- [La estructura de un proxy]()
+- [La estructura de un proxy](./02_proxy/)
 
-- [Un ejemplo serverless para reconocer palabras]()
+- [Un ejemplo serverless para reconocer palabras](./03_commander/)
 
-- [El prooxy + serverless]()
+- [El proxy + serverless](./04_web_speech/)
 
-- [Mezclando todo para tener una web funcional]()
+- [Mezclando todo para tener una web funcional](./05_app/)
 
-- [Algunos tips]()
+- [Algunos tips](./06_tips/)
 
 ### Tener en cuenta
 
