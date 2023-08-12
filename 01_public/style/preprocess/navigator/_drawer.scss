@@ -1,5 +1,7 @@
 @import "../basic/colorPalette";
 @import "../basic/breackPoints";
+@import "../decoration/_boxes";
+@import "../decoration/_links";
 
 .drawer {
   display: flex;
@@ -17,8 +19,39 @@
   }
 }
 
+@media (min-width: $layout-breakpoint-medium) {
+  .drawer--item--data {
+    @include links;
+  }
+}
+
 @media (max-width: $layout-breakpoint-medium) {
   .drawer {
+    @include border;
+
+    flex-direction: column;
     display: none;
+
+    position: absolute;
+    left: 30%;
+    top: 5%;
+
+    background: $background;
+    .drawer--item {
+      min-width: 35vw;
+      padding: 3vh;
+
+      &:first-child {
+        border-radius: 15px 15px 0px 0px;
+      }
+
+      &:last-child {
+        border-radius: 0px 0px 15px 15px;
+      }
+
+      &:hover {
+        background: $background-variant;
+      }
+    }
   }
 }
