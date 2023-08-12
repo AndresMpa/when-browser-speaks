@@ -10,23 +10,33 @@
   </head>
   <body>
     <nav class="navigator">
-      <figure class="icon">
+      <figure class="icon" tabindex="0" title="the recorder - menu">
         <img
           class="icon--image"
           src="./asset/microphone.png"
           alt="microphone"
         />
         <figcaption class="icon--title">The recorder</figcaption>
+        <p class="tooltiptext">Menu</p>
       </figure>
 
       <ul class="drawer">
-        <li class="drawer--item links">Recorder</li>
-        <li class="drawer--item links">Transcription</li>
-        <li class="drawer--item links">Description</li>
-        <li class="drawer--item links">About</li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Recorder</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Transcription</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Description</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">About</p>
+        </li>
       </ul>
 
-      <button class="button">
+      <button class="button border" title="setting">
+        <p class="tooltiptext">Settings</p>
         <figure class="button--setting">
           <img
             class="button--setting--image"
