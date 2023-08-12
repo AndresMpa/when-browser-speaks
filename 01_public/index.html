@@ -48,7 +48,86 @@
       </button>
     </nav>
 
-    <main id="app"></main>
+    <main id="app">
+      <!--
+        Recorder
+
+        Recording process trough a button an a text box
+      -->
+      <!--
+        Transcription
+
+        A simple box that pre process the output
+      -->
+      <!--
+        Description
+
+        A input to handle with possible mistakes
+      -->
+      <!--
+        About
+
+        A simple page with some information
+      -->
+      <section>
+        <article>
+          <h2>About this project</h2>
+          <blockquote
+            cite="https://www.azquotes.com/picture-quotes/quote-the-human-voice-is-the-most-beautiful-instrument-of-all-but-the-most-difficult-to-play-richard-strauss-67-99-01.jpg"
+          >
+            Human voice is the most beautiful instrument of all, but the most
+            difficult to play
+          </blockquote>
+          <cite>Richard Strauss</cite>
+          <p>
+            The scope of this project is to show a simple implementation of a
+            Web Speech API, but using a complex architecture to show some
+            different utilities of web APIs also showing the attendees of this
+            workshop a way to achieve backendless complex functionalities.
+          </p>
+
+          <h3>Aims for this workshop</h3>
+          <ul>
+            <li>Learn a bit about Web APIs</li>
+            <li>Learn about backendless architectures</li>
+            <li>Achieve a way to use the Web Speech API trough proxies</li>
+            <li>Involve attendees in accessibility common issues</li>
+            <li>Show real usable projects</li>
+            <li>
+              Show some utilities from OS to solve web common issues under a
+              specific context
+            </li>
+          </ul>
+        </article>
+        <article>
+          <h2>Keep in mind</h2>
+          <h3>Usage constrains</h3>
+          <p>
+            It's important to know that
+            <a
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#browser_compatibility"
+              >Web Speech API</a
+            >
+            is not fully supported, this is an important constraint when you
+            want to add this kind of features, still there other options to have
+            speech utilities, such as
+            <a href="https://webassembly.org/">Web Assembly</a>, but the
+            complexity associated to "WA" is significantly higher, keeping that
+            in mind; web speech API is still a pretty good way to handle with
+            speech needs
+          </p>
+          <h3>Position in critical path</h3>
+          <p>
+            If you need a feature like this, generally your application is
+            "working over wheels", it's never a good idea to start your
+            development critical path having features like what Web Speech API
+            offers. This recommendation comes for experience, but if there's any
+            business characteristic you need to solve using something such as
+            this it might be better the "WA" approach
+          </p>
+        </article>
+      </section>
+    </main>
 
     <footer class="footer">
       <article class="credits">
