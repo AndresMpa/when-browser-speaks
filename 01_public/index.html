@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -54,31 +54,62 @@
 
         Recording process trough a button an a text box
       -->
+      <section class="recorder">
+        <article class="recorder--textbox">
+          <p class="recorder--textbox--data"></p>
+        </article>
+        <article id="controls" class="recorder--controls">
+          <button class="recorder--contrls--button">undone</button>
+          <button class="recorder--contrls--button button__bigger">
+            record
+          </button>
+          <button class="recorder--contrls--button">edit</button>
+        </article>
+      </section>
       <!--
         Transcription
 
         A simple box that pre process the output
       -->
+      <section class="transcription">
+        <article class="transcription--textbox">
+          <textarea
+            class="transcription--textbox--data"
+            name="transcription"
+            id="transcription"
+            disable
+          ></textarea>
+        </article>
+      </section>
       <!--
         Description
 
         A input to handle with possible mistakes
       -->
+      <section class="description">
+        <article class="description--wrapper">
+          <textarea
+            class="description--wrapper--data"
+            name="description"
+            id="description"
+          ></textarea>
+        </article>
+      </section>
       <!--
         About
 
         A simple page with some information
       -->
-      <section>
-        <article>
-          <h2>About this project</h2>
-          <blockquote
+      <section class="about">
+        <article class="about--wrapper">
+          <h2 class="about--wrapper--title">About this project</h2>
+          <blockquote class="about--wrapper--phrase"
             cite="https://www.azquotes.com/picture-quotes/quote-the-human-voice-is-the-most-beautiful-instrument-of-all-but-the-most-difficult-to-play-richard-strauss-67-99-01.jpg"
           >
             Human voice is the most beautiful instrument of all, but the most
             difficult to play
           </blockquote>
-          <cite>Richard Strauss</cite>
+          <cite class="about--wrapper--author">Richard Strauss</cite>
           <p>
             The scope of this project is to show a simple implementation of a
             Web Speech API, but using a complex architecture to show some
