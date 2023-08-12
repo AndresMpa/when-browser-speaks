@@ -1,13 +1,37 @@
+@import "../basic/breackPoints";
+@import "../decoration/_tooltip";
+@import "../decoration/_boxes";
 @import "../basic/fonts";
 
 .icon {
   display: flex;
   align-items: center;
+
+  position: relative;
   .icon--image {
     width: 50px;
     height: 50px;
   }
   .icon--title {
     font-family: $font-title;
+  }
+
+  .tooltiptext {
+    @include border;
+    @include tooltip(210%, none);
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .icon {
+    cursor: pointer;
+    .icon--title {
+      display: none;
+    }
+
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
