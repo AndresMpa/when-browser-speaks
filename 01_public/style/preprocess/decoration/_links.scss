@@ -1,19 +1,21 @@
 @import "../basic/fonts";
 
-.links {
+@mixin links {
   &:after {
     content: "";
 
     transition: transform 0.25s ease-out;
     transform-origin: bottom right;
     transform: scaleX(0);
+
     position: absolute;
-
-    width: 60%;
-    height: 2px;
-
-    left: 15px;
     bottom: -5px;
+    right: 0;
+    left: 0;
+
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
 
     background-color: $links;
   }
