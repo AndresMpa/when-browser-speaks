@@ -1,13 +1,21 @@
+@import "../basic/breackPoints";
 @import "../basic/colorPalette";
-@import "credits";
 @import "sentence";
+@import "credits";
 
 .footer {
   display: flex;
   flex-wrap: wrap;
   margin: 15px auto 0px;
   justify-content: space-around;
-  &>* {
+  & > * {
     flex: 0 0 50%;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
   }
 }
