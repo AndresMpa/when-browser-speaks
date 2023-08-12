@@ -1,24 +1,33 @@
-@import "../basic/colorPalette";
 @import "../basic/breackPoints";
+@import "../decoration/_tooltip";
+@import "../decoration/_boxes";
 
 .button {
-  border: solid black 1px;
-  cursor: pointer;
-  background: none;
-  border-radius: 15px;
-  margin: 0px 15px;
+  @include border;
+
+  position: relative;
+
   padding: 0px 15px;
+  margin: 0px 15px;
+
+  background: none;
+
+  cursor: pointer;
   .button--setting {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     .button--setting--image {
-      width: 20px;
       height: 20px;
+      width: 20px;
     }
     .button--setting--label {
       margin-right: 5px;
     }
+  }
+  .tooltiptext {
+    @include border;
+    @include tooltip(none, 110%);
   }
 }
 
@@ -28,6 +37,11 @@
       .button--setting--label {
         display: none;
       }
+    }
+
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
     }
   }
 }
