@@ -21,30 +21,10 @@ a {
   color: #0ca2eb;
 }
 
-.bg-main {
-  background: #0125eb;
-}
-
-.links:after {
-  content: "";
-  transition: transform 0.25s ease-out;
-  transform-origin: bottom right;
-  transform: scaleX(0);
-  position: absolute;
-  width: 60%;
-  height: 2px;
-  left: 15px;
-  bottom: -5px;
-  background-color: #0ca2eb;
-}
-.links:hover:after {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
 .icon {
   display: flex;
   align-items: center;
+  position: relative;
 }
 .icon .icon--image {
   width: 50px;
@@ -53,7 +33,39 @@ a {
 .icon .icon--title {
   font-family: "Nunito", sans-serif;
 }
+.icon .tooltiptext {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  visibility: hidden;
+  margin-left: -60px;
+  padding: 5px 0;
+  width: 120px;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  position: absolute;
+  right: none;
+  left: 210%;
+  top: 8px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
 
+@media (max-width: 768px) {
+  .icon {
+    cursor: pointer;
+  }
+  .icon .icon--title {
+    display: none;
+  }
+  .icon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .drawer {
   display: flex;
   justify-content: space-around;
@@ -68,18 +80,59 @@ a {
   cursor: pointer;
 }
 
+@media (min-width: 768px) {
+  .drawer--item--data:after {
+    content: "";
+    transition: transform 0.25s ease-out;
+    transform-origin: bottom right;
+    transform: scaleX(0);
+    position: absolute;
+    bottom: -5px;
+    right: 0;
+    left: 0;
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    background-color: #0ca2eb;
+  }
+  .drawer--item--data:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
 @media (max-width: 768px) {
   .drawer {
+    border: solid #000000 1px;
+    border-radius: 15px;
+    flex-direction: column;
     display: none;
+    position: absolute;
+    left: 30%;
+    top: 5%;
+    background: #ffffff;
+  }
+  .drawer .drawer--item {
+    min-width: 35vw;
+    padding: 3vh;
+  }
+  .drawer .drawer--item:first-child {
+    border-radius: 15px 15px 0px 0px;
+  }
+  .drawer .drawer--item:last-child {
+    border-radius: 0px 0px 15px 15px;
+  }
+  .drawer .drawer--item:hover {
+    background: #efefef;
   }
 }
 .button {
-  border: solid black 1px;
-  cursor: pointer;
-  background: none;
+  border: solid #000000 1px;
   border-radius: 15px;
-  margin: 0px 15px;
+  position: relative;
   padding: 0px 15px;
+  margin: 0px 15px;
+  background: none;
+  cursor: pointer;
 }
 .button .button--setting {
   display: flex;
@@ -87,16 +140,40 @@ a {
   flex-direction: row-reverse;
 }
 .button .button--setting .button--setting--image {
-  width: 20px;
   height: 20px;
+  width: 20px;
 }
 .button .button--setting .button--setting--label {
   margin-right: 5px;
+}
+.button .tooltiptext {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  visibility: hidden;
+  margin-left: -60px;
+  padding: 5px 0;
+  width: 120px;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  position: absolute;
+  right: 110%;
+  left: none;
+  top: 8px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 @media (max-width: 768px) {
   .button .button--setting .button--setting--label {
     display: none;
+  }
+  .button:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
   }
 }
 .navigator {
@@ -106,17 +183,23 @@ a {
   justify-content: space-between;
 }
 
+.sentence .sentence--label {
+  text-align: center;
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+}
+
 .credits .credits--title {
   margin: 0 0 0 50px;
 }
 .credits .credits--content {
   padding: 5vh 5vw;
 }
-.sentence .sentence--label {
-  text-align: center;
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+@media (max-width: 576px) {
+  .credits .credits--content {
+    margin: auto;
+    width: 75%;
+  }
 }
-
 .footer {
   display: flex;
   flex-wrap: wrap;
@@ -125,6 +208,13 @@ a {
 }
 .footer > * {
   flex: 0 0 50%;
+}
+
+@media (max-width: 576px) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
