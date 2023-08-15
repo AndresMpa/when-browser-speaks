@@ -1,7 +1,6 @@
 @import "../basic/breackPoints";
-@import "../decoration/_tooltip";
-@import "../decoration/_boxes";
 @import "../basic/fonts";
+@import "../decoration";
 
 .icon {
   display: flex;
@@ -14,6 +13,8 @@
   }
   .icon--title {
     font-family: $font-title;
+    font-style: italic;
+    font-weight: bold;
   }
 
   .tooltiptext {

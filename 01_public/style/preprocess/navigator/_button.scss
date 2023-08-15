@@ -1,9 +1,9 @@
 @import "../basic/breackPoints";
-@import "../decoration/_tooltip";
-@import "../decoration/_boxes";
+@import "../basic/fonts";
+@import "../decoration";
 
 .button {
-  @include border;
+  @include border($letter-alt);
 
   position: relative;
 
