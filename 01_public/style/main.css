@@ -21,51 +21,6 @@ a {
   color: #0ca2eb;
 }
 
-.icon {
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.icon .icon--image {
-  width: 50px;
-  height: 50px;
-}
-.icon .icon--title {
-  font-family: "Nunito", sans-serif;
-}
-.icon .tooltiptext {
-  border: solid #000000 1px;
-  border-radius: 15px;
-  visibility: hidden;
-  margin-left: -60px;
-  padding: 5px 0;
-  width: 120px;
-  background-color: #ffffff;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: center;
-  font-size: 16px;
-  color: #000000;
-  position: absolute;
-  right: none;
-  left: 210%;
-  top: 8px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 1s;
-}
-
-@media (max-width: 768px) {
-  .icon {
-    cursor: pointer;
-  }
-  .icon .icon--title {
-    display: none;
-  }
-  .icon:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
-  }
-}
 .drawer {
   display: flex;
   justify-content: space-around;
@@ -126,7 +81,7 @@ a {
   }
 }
 .button {
-  border: solid #000000 1px;
+  border: solid snow 1px;
   border-radius: 15px;
   position: relative;
   padding: 0px 15px;
@@ -176,16 +131,74 @@ a {
     opacity: 1;
   }
 }
+.icon {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.icon .icon--image {
+  width: 50px;
+  height: 50px;
+}
+.icon .icon--title {
+  font-family: "Nunito", sans-serif;
+  font-style: italic;
+  font-weight: bold;
+}
+.icon .tooltiptext {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  visibility: hidden;
+  margin-left: -60px;
+  padding: 5px 0;
+  width: 120px;
+  background-color: #ffffff;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  font-size: 16px;
+  color: #000000;
+  position: absolute;
+  right: none;
+  left: 210%;
+  top: 8px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@media (max-width: 768px) {
+  .icon {
+    cursor: pointer;
+  }
+  .icon .icon--title {
+    display: none;
+  }
+  .icon:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+}
 .navigator {
   display: flex;
   margin-bottom: 10px;
-  padding: 8px 8px 0px 8px;
+  padding: 8px 8px 15px 8px;
   justify-content: space-between;
+  background: #0125eb;
+}
+.navigator * {
+  color: snow;
+}
+.navigator * img {
+  filter: invert(100%);
 }
 
+.sentence {
+  display: contents;
+}
 .sentence .sentence--label {
   text-align: center;
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+  padding: 15px 0px;
 }
 
 .credits .credits--title {
@@ -194,6 +207,17 @@ a {
 .credits .credits--content {
   padding: 5vh 5vw;
 }
+.credits .credits--content .credits--content--data {
+  column-count: 2;
+  column-gap: 50px;
+  column-width: 50px;
+  column-rule-width: 2px;
+}
+.credits .credits--content .credits--content--link {
+  color: #eb8b17;
+  font-weight: 900;
+}
+
 @media (max-width: 576px) {
   .credits .credits--content {
     margin: auto;
@@ -204,7 +228,12 @@ a {
   display: flex;
   flex-wrap: wrap;
   margin: 15px auto 0px;
+  padding: 50px;
   justify-content: space-around;
+  background: #0125eb;
+}
+.footer * {
+  color: snow;
 }
 .footer > * {
   flex: 0 0 50%;
@@ -215,6 +244,106 @@ a {
     flex-direction: column;
     justify-content: space-between;
   }
+}
+.recorder {
+  display: none;
+  flex-direction: column;
+}
+.recorder .recorder--textbox {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  padding: 10px;
+  margin: 15px;
+  height: 50vh;
+  width: 90vw;
+  background: #efefef;
+}
+.recorder .recorder--textbox .recorder--textbox--data {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono", "Droid Sans Mono", monospace, monospace;
+}
+.recorder .recorder--controls {
+  display: flex;
+  justify-content: space-around;
+}
+.recorder .recorder--controls .recorder--controls--button {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.recorder .recorder--controls .recorder--controls--button .recorder--controls--img {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 25px;
+}
+.recorder .recorder--controls .recorder--controls--button .recorder--controls--label {
+  display: flex;
+  align-self: center;
+  margin: 0px 10px;
+}
+
+.transcription {
+  display: none;
+  flex-direction: column;
+}
+.transcription .transcription--textbox {
+  display: flex;
+  width: 90vw;
+  height: 50vh;
+  margin: 15px auto;
+}
+.transcription .transcription--textbox .transcription--textbox--data {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  overflow: hidden;
+  resize: none;
+  flex: 1;
+  padding: 10px;
+}
+.transcription .transcription--controls {
+  display: flex;
+  justify-content: space-around;
+}
+.transcription .transcription--controls .transcription--controls--button {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.transcription .transcription--controls .transcription--controls--button .transcription--controls--img {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  padding: 10px;
+  width: 25px;
+}
+.transcription .transcription--controls .transcription--controls--button .transcription--controls--label {
+  display: flex;
+  align-self: center;
+  margin: 0px 10px;
+}
+
+.description {
+  display: none;
+  flex-direction: column;
+}
+.description .description--wrapper {
+  display: flex;
+  width: 90vw;
+  height: 50vh;
+  margin: 15px auto;
+}
+.description .description--wrapper .description--wrapper--data {
+  border: solid #000000 1px;
+  border-radius: 15px;
+  overflow: hidden;
+  resize: none;
+  flex: 1;
+  padding: 10px;
+}
+
+.about {
+  display: none;
 }
 
 /*# sourceMappingURL=main.css.map */
