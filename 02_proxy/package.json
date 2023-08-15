@@ -1,0 +1,19 @@
+{
+  "name": "proxy",
+  "version": "1.0.0",
+  "description": "A simple proxy example for frontend",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server",
+    "dev": "npx live-server --no-browser --port=3000"
+  },
+  "keywords": [
+    "proxy",
+    "frontend"
+  ],
+  "author": "AndresMpa",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
