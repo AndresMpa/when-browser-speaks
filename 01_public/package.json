@@ -4,7 +4,8 @@
   "description": "Template para la estructura del paso 01 \"public\" que corresponde con el frontend",
   "main": "index.js",
   "scripts": {
-    "style": "npx sass --watch ./style/preprocess/:./style/"
+    "style": "npx sass --watch ./style/preprocess/:./style/",
+    "dev": "npx http-server . -p 8000"
   },
   "keywords": [
     "template",
@@ -13,6 +14,7 @@
   "author": "AndresMpa",
   "license": "ISC",
   "devDependencies": {
+    "http-server": "^14.1.1",
     "sass": "^1.64.0"
   }
 }
