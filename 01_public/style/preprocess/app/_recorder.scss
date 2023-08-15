@@ -1,0 +1,44 @@
+@import "../basic/colorPalette";
+@import "../basic/fonts";
+@import "../decoration";
+
+.recorder {
+  display: none;
+  flex-direction: column;
+  .recorder--textbox {
+    @include border;
+
+    padding: 10px;
+    margin: 15px;
+    height: 50vh;
+    width: 90vw;
+
+    background: $background-variant;
+    .recorder--textbox--data {
+      font-family: $font-important;
+    }
+  }
+
+  .recorder--controls {
+    display: flex;
+    justify-content: space-around;
+    .recorder--controls--button {
+      @include border;
+
+      display: flex;
+      flex-direction: row-reverse;
+      .recorder--controls--img {
+        @include border;
+
+        padding: 10px;
+        width: 25px;
+      }
+      .recorder--controls--label {
+        display: flex;
+        align-self: center;
+
+        margin: 0px 10px;
+      }
+    }
+  }
+}
