@@ -1,0 +1,8 @@
+services:
+  proxy_test:
+    build: ./docker/proxy/Dockerfile
+    container_name: proxy_test
+    ports:
+      - '8000:3000'
+    volumes:
+      - ./proxy_data:/app
