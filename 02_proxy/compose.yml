@@ -1,6 +1,6 @@
 services:
   proxy_test:
-    build: ./docker/proxy/Dockerfile
+    build: .
     container_name: proxy_test
     ports:
       - '8000:3000'
