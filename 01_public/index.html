@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
@@ -56,14 +56,34 @@
       -->
       <section class="recorder">
         <article class="recorder--textbox">
-          <p class="recorder--textbox--data"></p>
+          <p class="recorder--textbox--data">
+          </p>
         </article>
         <article id="controls" class="recorder--controls">
-          <button class="recorder--contrls--button">undone</button>
-          <button class="recorder--contrls--button button__bigger">
-            record
-          </button>
-          <button class="recorder--contrls--button">edit</button>
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img"
+              src="./asset/undo.png"
+              alt="undo"
+            />
+            <figcaption class="recorder--controls--label">Undo</figcaption>
+          </figure>
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img button__bigger"
+              src="./asset/record.png"
+              alt="record"
+            />
+            <figcaption class="recorder--controls--label">Record</figcaption>
+          </figure>
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img"
+              src="./asset/edit.png"
+              alt="edit"
+            />
+            <figcaption class="recorder--controls--label">Edit</figcaption>
+          </figure>
         </article>
       </section>
       <!--
@@ -80,6 +100,28 @@
             disable
           ></textarea>
         </article>
+        <article id="transcription" class="transcription--controls">
+          <figure class="transcription--controls--button">
+            <img
+              class="transcription--controls--img"
+              src="./asset/delete.png"
+              alt="delete"
+            />
+            <figcaption class="transcription--controls--label">
+              Delete
+            </figcaption>
+          </figure>
+          <figure class="transcription--controls--button">
+            <img
+              class="transcription--controls--img"
+              src="./asset/check.png"
+              alt="check"
+            />
+            <figcaption class="transcription--controls--label">
+              Check
+            </figcaption>
+          </figure>
+        </article>
       </section>
       <!--
         Description
@@ -92,7 +134,9 @@
             class="description--wrapper--data"
             name="description"
             id="description"
-          ></textarea>
+            disable
+          >
+          </textarea>
         </article>
       </section>
       <!--
@@ -103,7 +147,8 @@
       <section class="about">
         <article class="about--wrapper">
           <h2 class="about--wrapper--title">About this project</h2>
-          <blockquote class="about--wrapper--phrase"
+          <blockquote
+            class="about--wrapper--phrase"
             cite="https://www.azquotes.com/picture-quotes/quote-the-human-voice-is-the-most-beautiful-instrument-of-all-but-the-most-difficult-to-play-richard-strauss-67-99-01.jpg"
           >
             Human voice is the most beautiful instrument of all, but the most
@@ -209,14 +254,47 @@
             >
               Settings
             </a>
-            icon by
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/3483/return"
+            >
+              Return
+            </a>
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/12653/microphone"
+              >Microphone</a
+            >
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/5267/edit-property"
+            >
+              Edit Property
+            </a>
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/1942/trash"
+              >Delete</a
+            >
+
+            and
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/11697/tick-box"
+              >Check</a
+            >
+            icons by
             <a
               target="_blank"
               class="credits--content--link"
               href="https://icons8.com"
+              >Icons8</a
             >
-              Icons8
-            </a>
           </p>
         </div>
       </article>
