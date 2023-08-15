@@ -1,0 +1,25 @@
+@import "../decoration";
+
+.description {
+  display: none;
+  flex-direction: column;
+
+  .description--wrapper {
+    display: flex;
+
+    width: 90vw;
+    height: 50vh;
+
+    margin: 15px auto;
+    .description--wrapper--data {
+      @include border;
+
+      overflow: hidden;
+      resize: none;
+
+      flex: 1;
+
+      padding: 10px;
+    }
+  }
+}
