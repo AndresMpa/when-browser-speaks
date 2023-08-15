@@ -1,5 +1,5 @@
-@use "colorPalette" as *;
-@use "fonts" as *;
+@import "colorPalette";
+@import "fonts";
 
 * {
   margin: 0%;
