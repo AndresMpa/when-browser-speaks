@@ -1,0 +1,42 @@
+:root {
+  --main: #0125eb;
+  --strong: #eb8b17;
+  --details: #ebe317;
+  --label: #630ceb;
+  --links: #0ca2eb;
+  --background: #000000;
+  --letter: #ffffff;
+}
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: var(--letter);
+  overflow-anchor: none;
+  font-family: "Nunito", sans-serif;
+  font-size: 24px;
+}
+
+body,
+html {
+  background-color: var(--background);
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 90vh;
+}
+
+#getter {
+  width: 65vw;
+  padding: 15px;
+  margin: 50px;
+  border-radius: 15px;
+
+  color: var(--strong);
+  font-size: 16px;
+}
