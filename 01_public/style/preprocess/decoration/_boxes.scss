@@ -5,7 +5,7 @@
   background: $main;
 }
 
-@mixin border {
-  border: solid $letter 1px;
+@mixin border($color: $letter) {
+  border: solid $color 1px;
   border-radius: 15px;
 }
