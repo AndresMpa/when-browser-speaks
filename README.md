@@ -1,4 +1,4 @@
-# Magic Ball Workshop
+# When browser speaks
 
 Este es un taller sobre [Web Speech API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API),
 esta es un API que sirve para usar la voz en web, se recomiendo checar la [tabla de compatibilidad](https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#browser_compatibility), este taller se creó sobre un Browser based on Chromium (Brave).
