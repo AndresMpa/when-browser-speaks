@@ -11,4 +11,5 @@ if (languageDetector("es")) {
 } else {
   actions = englishActions(getter);
 }
+
 getter.addEventListener("keyup", proxyManager(getter, actions), false);
