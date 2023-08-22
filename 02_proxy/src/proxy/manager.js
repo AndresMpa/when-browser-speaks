@@ -1,9 +1,9 @@
 import { proxyGenerator } from "./generator.js";
-import textProxy from "../handlers/text.js";
+import { proxyHandler } from "../handlers/index.js";
 import { displayActions } from "../util/prompt.js";
 
 const managerConstructor = (target, actions) => {
-  const proxy = proxyGenerator(actions, textProxy);
+  const proxy = proxyGenerator(actions, proxyHandler);
   displayActions(actions, target.parentNode.parentNode);
 
   const proxyManager = (event) => {
