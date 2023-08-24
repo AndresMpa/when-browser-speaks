@@ -1,0 +1,15 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "Example of distance between words",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx live-server",
+    "dev": "npx live-server --no-browser --port=3000"
+  },
+  "author": "AndresMpa",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
