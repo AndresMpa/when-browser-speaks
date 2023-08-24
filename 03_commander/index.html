@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./.asset/favicon.ico" />
+    <link rel="stylesheet" href="public/style/main.css" />
+    <title>Reducing distances</title>
+  </head>
+  <body>
+    <main class="wrapper">
+      <article class="box">
+        <input
+          id="getter"
+          type="text"
+          class="box--text"
+          placeholder="Hey UbuCon"
+        />
+      </article>
+
+      <article class="box">
+        <div id="output" class="box--text">
+          <h3 class="box--title">Instructions</h3>
+          <ul>
+            <li>Input your text the previous box</li>
+            <li>See possible options in this side</li>
+            <li>Enjoy this workshop</li>
+          </ul>
+        </div>
+      </article>
+    </main>
+
+    <script src="https://unpkg.com/fast-levenshtein@2.0.6/levenshtein.js"></script>
+    <script src="./src/main.js" type="module"></script>
+  </body>
+</html>
