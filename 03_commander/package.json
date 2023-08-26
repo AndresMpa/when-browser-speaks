@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npx live-server",
-    "dev": "npx live-server --no-browser --port=3000"
+    "dev": "npx live-server --no-browser --port=3000",
+    "init": "bash ./util/prepare.sh &"
   },
   "author": "AndresMpa",
   "license": "MIT",
