@@ -1,15 +1,13 @@
 import { config } from "../config/index.js";
 
-const getSuggestion = (value) => {
-  const words = localStorage.getItem("dictionary");
+const words = JSON.parse(localStorage.getItem("dictionary")) || [];
 
-  let suggestion = words.find((key) => {
-    return Levenshtein.get(key, value) <= config.levenshteinDistance;
-  });
+const getSuggestion = (value) => {
+  let suggestion = words.filter(
+    (word) => Levenshtein.get(word, value) <= config.levenshteinDistance,
+  );
 
   return suggestion;
 };
 
-export default {
-  getSuggestion,
-};
+export default getSuggestion;
