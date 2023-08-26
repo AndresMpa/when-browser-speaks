@@ -8,7 +8,16 @@ const getFileFromURL = async (url) => {
 const getFileAsArray = async (data) => {
   let reader = new FileReader();
 
-  reader.onload = () => localStorage.setItem("dictionary", reader.result);
+  reader.onload = () => {
+    try {
+      localStorage.setItem(
+        "dictionary",
+        JSON.stringify(reader.result.split(" ")),
+      );
+    } catch (error) {
+      console.error(error);
+    }
+  };
   reader.onerror = () => console.log(reader.error);
 
   reader.readAsText(data);
