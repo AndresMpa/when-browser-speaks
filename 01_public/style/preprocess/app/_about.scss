@@ -1,3 +1,43 @@
+@import "../decoration/links";
+@import "../basic/fonts";
+
 .about {
   display: none;
+  .about--wrapper {
+    display: flex;
+    flex-direction: column;
+
+    margin: 15px;
+    padding: 15px;
+    .about--phrase {
+      font-family: $font-important;
+      font-style: italic;
+    }
+    .about--author {
+      display: flex;
+      justify-content: flex-end;
+
+      margin: 15px;
+    }
+    .about--title {
+      padding: 15px;
+    }
+    .about--subtitle {
+      padding: 15px 30px;
+    }
+    .about--list {
+      padding-left: 50px;
+    }
+    .about--item {
+      padding: 5px 0px;
+    }
+    .about--content {
+      text-align: justify;
+    }
+    .about--link {
+      @include links;
+
+      color: $label;
+    }
+  }
 }
