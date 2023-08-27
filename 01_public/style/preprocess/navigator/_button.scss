@@ -3,7 +3,7 @@
 @import "../decoration";
 
 .button {
-  @include border($letter-alt);
+  @include border($letter);
 
   position: relative;
 

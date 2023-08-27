@@ -15,6 +15,16 @@
 
     text-align: center;
     cursor: pointer;
+
+    .drawer--item--data {
+      transition: color 50ms;
+      transition-delay: 300ms;
+      &:hover {
+        color: $strong;
+        transition: color 50ms;
+        transition-delay: 0ms;
+      }
+    }
   }
 }
 
