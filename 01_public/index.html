@@ -56,8 +56,7 @@
       -->
       <section class="recorder">
         <article class="recorder--textbox">
-          <p class="recorder--textbox--data">
-          </p>
+          <p class="recorder--textbox--data"></p>
         </article>
         <article id="controls" class="recorder--controls">
           <figure class="recorder--controls--button">
@@ -130,13 +129,7 @@
       -->
       <section class="description">
         <article class="description--wrapper">
-          <textarea
-            class="description--wrapper--data"
-            name="description"
-            id="description"
-            disable
-          >
-          </textarea>
+          <p class="description--wrapper--data" id="description"></p>
         </article>
       </section>
       <!--
@@ -146,54 +139,60 @@
       -->
       <section class="about">
         <article class="about--wrapper">
-          <h2 class="about--wrapper--title">About this project</h2>
+          <h2 class="about--title">About this project</h2>
           <blockquote
-            class="about--wrapper--phrase"
+            class="about--phrase"
             cite="https://www.azquotes.com/picture-quotes/quote-the-human-voice-is-the-most-beautiful-instrument-of-all-but-the-most-difficult-to-play-richard-strauss-67-99-01.jpg"
           >
-            Human voice is the most beautiful instrument of all, but the most
-            difficult to play
+            "Human voice is the most beautiful instrument of all, but the most
+            difficult to play"
           </blockquote>
-          <cite class="about--wrapper--author">Richard Strauss</cite>
-          <p>
+          <cite class="about--author">Richard Strauss</cite>
+          <p class="about--content">
             The scope of this project is to show a simple implementation of a
             Web Speech API, but using a complex architecture to show some
             different utilities of web APIs also showing the attendees of this
             workshop a way to achieve backendless complex functionalities.
           </p>
 
-          <h3>Aims for this workshop</h3>
-          <ul>
-            <li>Learn a bit about Web APIs</li>
-            <li>Learn about backendless architectures</li>
-            <li>Achieve a way to use the Web Speech API trough proxies</li>
-            <li>Involve attendees in accessibility common issues</li>
-            <li>Show real usable projects</li>
-            <li>
+          <h3 class="about--subtitle">Aims for this workshop</h3>
+          <ul class="about--list">
+            <li class="about--item">Learn a bit about Web APIs</li>
+            <li class="about--item">Learn about backendless architectures</li>
+            <li class="about--item">
+              Achieve a way to use the Web Speech API trough proxies
+            </li>
+            <li class="about--item">
+              Involve attendees in accessibility common issues
+            </li>
+            <li class="about--item">Show real usable projects</li>
+            <li class="about--item">
               Show some utilities from OS to solve web common issues under a
               specific context
             </li>
           </ul>
         </article>
-        <article>
-          <h2>Keep in mind</h2>
-          <h3>Usage constrains</h3>
-          <p>
+        <article class="about--wrapper">
+          <h2 class="about--title">Keep in mind</h2>
+          <h3 class="about--subtitle">Usage constrains</h3>
+          <p class="about--content">
             It's important to know that
             <a
+              class="about--link"
               href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#browser_compatibility"
               >Web Speech API</a
             >
             is not fully supported, this is an important constraint when you
             want to add this kind of features, still there other options to have
             speech utilities, such as
-            <a href="https://webassembly.org/">Web Assembly</a>, but the
-            complexity associated to "WA" is significantly higher, keeping that
-            in mind; web speech API is still a pretty good way to handle with
-            speech needs
+            <a class="about--link" href="https://webassembly.org/"
+              >Web Assembly</a
+            >, but the complexity associated to "WA" is significantly higher,
+            keeping that in mind; web speech API is still a pretty good way to
+            handle with speech needs
           </p>
-          <h3>Position in critical path</h3>
-          <p>
+          <h3 class="about--subtitle">Position in critical path</h3>
+          <p class="about--content">
             If you need a feature like this, generally your application is
             "working over wheels", it's never a good idea to start your
             development critical path having features like what Web Speech API
@@ -208,40 +207,32 @@
     <footer class="footer">
       <article class="credits">
         <h3 class="credits--title">Credits</h3>
-        <div class="credits--content">
-          <p class="credits--content--data">
-            Made by:
-            <a
-              target="_blank"
-              class="credits--content--link"
-              href="https://github.com/AndresMpa"
-            >
-              AndresMpa
-            </a>
-          </p>
+        <p class="credits--content">
+          Made by:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa"
+            >AndresMpa</a
+          >
 
-          <p class="credits--content--data">
-            Project:
-            <a
-              target="_blank"
-              class="credits--content--link"
-              href="https://github.com/AndresMpa/magic-ball-workshop"
-            >
-              magic-ball-workshop
-            </a>
-          </p>
-
-          <p class="credits--content--data">
-            Contact:
-            <a
-              target="_blank"
-              class="credits--content--link"
-              href="https://www.linkedin.com/in/andresmpa/"
-            >
-              Andres M. Prieto Álvarez
-            </a>
-          </p>
-        </div>
+          <span class="divider"></span>
+          Project:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa/when-browser-speaks"
+            >when-browser-speaks</a
+          >
+          <span class="divider"></span>
+          Contact:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://www.linkedin.com/in/andresmpa/"
+            >Andres M. Prieto Álvarez</a
+          >
+        </p>
       </article>
       <article class="credits">
         <h3 class="credits--title">Thanks to</h3>
@@ -251,16 +242,14 @@
               target="_blank"
               class="credits--content--link"
               href="https://icons8.com/icon/364/settings"
+              >Settings</a
             >
-              Settings
-            </a>
             <a
               target="_blank"
               class="credits--content--link"
               href="https://icons8.com/icon/3483/return"
+              >Return</a
             >
-              Return
-            </a>
             <a
               target="_blank"
               class="credits--content--link"
@@ -271,9 +260,8 @@
               target="_blank"
               class="credits--content--link"
               href="https://icons8.com/icon/5267/edit-property"
+              >Edit Property</a
             >
-              Edit Property
-            </a>
             <a
               target="_blank"
               class="credits--content--link"
