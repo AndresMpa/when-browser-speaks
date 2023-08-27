@@ -7,15 +7,15 @@
   }
   .credits--content {
     padding: 5vh 5vw;
-    .credits--content--data {
-      column-count: 2;
-      column-gap: 50px;
-      column-width: 50px;
-      column-rule-width: 2px;
-    }
     .credits--content--link {
       color: $strong;
       font-weight: 900;
+      &:after {
+        content: ",";
+      }
+      &:last-child:after {
+        content: "";
+      }
     }
   }
 }
