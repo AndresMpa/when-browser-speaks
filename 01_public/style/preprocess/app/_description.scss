@@ -1,16 +1,21 @@
+@import "../basic/fonts";
 @import "../decoration";
 
 .description {
   display: none;
   flex-direction: column;
-
   .description--wrapper {
+    @include border;
+
     display: flex;
 
     width: 90vw;
     height: 50vh;
 
     margin: 15px auto;
+
+    background: $background-alt;
+    color: $letter-alt;
     .description--wrapper--data {
       @include border;
 
