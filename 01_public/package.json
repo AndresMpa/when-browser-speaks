@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "style": "npx sass --watch ./style/preprocess/:./style/",
-    "dev": "npx http-server . -p 8000"
+    "dev": "npx live-server"
   },
   "keywords": [
     "template",
@@ -14,7 +14,7 @@
   "author": "AndresMpa",
   "license": "ISC",
   "devDependencies": {
-    "http-server": "^14.1.1",
+    "live-server": "^1.2.2",
     "sass": "^1.64.0"
   }
 }
