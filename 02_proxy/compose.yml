@@ -3,6 +3,4 @@ services:
     build: .
     container_name: proxy_test
     ports:
-      - '8000:3000'
-    volumes:
-      - ./proxy_data:/app
+      - '8000:8000'
