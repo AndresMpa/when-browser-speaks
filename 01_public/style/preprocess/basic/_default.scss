@@ -10,7 +10,7 @@
 }
 
 body {
-  background-color: $background;
+  background: $background;
 }
 
 ul,
@@ -22,4 +22,18 @@ li {
 a {
   text-decoration: none;
   color: $links;
+}
+
+.divider {
+  display: block;
+}
+
+::-moz-selection {
+  color: $letter;
+  background: $details;
+}
+
+::selection {
+  color: $letter;
+  background: $details;
 }
