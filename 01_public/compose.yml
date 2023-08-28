@@ -1,0 +1,10 @@
+services:
+  template:
+    image: "node:20-alpine"
+    working_dir: /app
+    container_name: template
+    ports:
+      - '8000:8000'
+    volumes:
+      - ./:/app
+    command: "npm run dev"
