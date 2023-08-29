@@ -1,0 +1,11 @@
+@import "../basic/_colorPalette";
+@import "../basic/_fonts";
+
+@mixin bg-main {
+  background: $main;
+}
+
+@mixin border($color: $letter) {
+  border: solid $color 1px;
+  border-radius: 15px;
+}

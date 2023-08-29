@@ -1,0 +1,19 @@
+{
+  "name": "when-browsers-speaks",
+  "version": "1.0.0",
+  "description": "An implementation of Web Speech API to enable commands through human voice",
+  "main": "index.js",
+  "scripts": {
+    "style": "npx sass --watch ./style/preprocess/:./style/",
+    "dev": "npx live-server --no-browser --port=8000"
+  },
+  "keywords": [
+    "javascript"
+  ],
+  "author": "AndresMpa",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2",
+    "sass": "^1.66.1"
+  }
+}

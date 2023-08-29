@@ -1,0 +1,29 @@
+@import "../basic/breackPoints";
+@import "../basic/colorPalette";
+@import "sentence";
+@import "credits";
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 15px auto 0px;
+  padding: 50px;
+  justify-content: space-around;
+
+  * {
+    color: $letter;
+  }
+
+  @include bg-main;
+
+  & > * {
+    flex: 0 0 50%;
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .footer {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}

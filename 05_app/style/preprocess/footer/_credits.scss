@@ -1,0 +1,30 @@
+@import "../basic/breackPoints";
+@import "../basic/colorPalette";
+
+.credits {
+  .credits--title {
+    margin: 0 0 0 50px;
+  }
+  .credits--content {
+    padding: 5vh 5vw;
+    .credits--content--link {
+      color: $strong;
+      font-weight: 900;
+      &:after {
+        content: ",";
+      }
+      &:last-child:after {
+        content: "";
+      }
+    }
+  }
+}
+
+@media (max-width: $layout-breakpoint-small) {
+  .credits {
+    .credits--content {
+      margin: auto;
+      width: 75%;
+    }
+  }
+}

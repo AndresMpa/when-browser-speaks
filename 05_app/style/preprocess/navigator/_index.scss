@@ -1,0 +1,21 @@
+@import "../decoration/boxes";
+@import "../basic/fonts";
+@import "drawer";
+@import "button";
+@import "icon";
+
+.navigator {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 8px 8px 15px 8px;
+  justify-content: space-between;
+
+  * {
+    color: $letter;
+    img {
+      filter: invert(100%);
+    }
+  }
+
+  @include bg-main;
+}

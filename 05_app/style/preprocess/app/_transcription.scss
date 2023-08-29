@@ -1,0 +1,48 @@
+@import "../decoration";
+
+.transcription {
+  display: none;
+  flex-direction: column;
+  .transcription--textbox {
+    display: flex;
+
+    width: 90vw;
+    height: 50vh;
+
+    margin: 15px auto;
+    .transcription--textbox--data {
+      @include border;
+
+      overflow: hidden;
+      resize: none;
+
+      flex: 1;
+
+      padding: 10px;
+
+      color: $letter-alt;
+    }
+  }
+  .transcription--controls {
+    display: flex;
+    justify-content: space-around;
+    .transcription--controls--button {
+      @include border;
+
+      display: flex;
+      flex-direction: row-reverse;
+      .transcription--controls--img {
+        padding: 10px;
+        width: 25px;
+
+        filter: invert(100%);
+      }
+      .transcription--controls--label {
+        display: flex;
+        align-self: center;
+
+        margin: 0px 10px;
+      }
+    }
+  }
+}

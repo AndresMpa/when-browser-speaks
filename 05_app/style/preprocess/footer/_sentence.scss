@@ -1,0 +1,11 @@
+@import "../basic/fonts";
+
+.sentence {
+  display: contents;
+  .sentence--label {
+    text-align: center;
+    font-family: $font-important;
+
+    padding: 15px 0px;
+  }
+}

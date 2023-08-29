@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./asset/favicon.ico" />
+    <link rel="stylesheet" href="./style/main.css" />
+    <title>Audio to text</title>
+  </head>
+  <body>
+    <nav class="navigator">
+      <figure class="icon" tabindex="0" title="the recorder - menu">
+        <img
+          class="icon--image"
+          src="./asset/microphone.png"
+          alt="microphone"
+        />
+        <figcaption class="icon--title">The recorder</figcaption>
+        <p class="tooltiptext">Menu</p>
+      </figure>
+
+      <ul class="drawer">
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Recorder</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Transcription</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">Description</p>
+        </li>
+        <li class="drawer--item" tabindex="0">
+          <p class="drawer--item--data">About</p>
+        </li>
+      </ul>
+
+      <button class="button border" title="setting">
+        <p class="tooltiptext">Settings</p>
+        <figure class="button--setting">
+          <img
+            class="button--setting--image"
+            src="./asset/settings.svg"
+            alt="Settings"
+          />
+          <figcaption class="button--setting--label">Settings</figcaption>
+        </figure>
+      </button>
+    </nav>
+
+    <main id="app">
+      <!--
+        Recorder
+
+        Recording process trough a button an a text box
+      -->
+      <section class="recorder">
+        <article class="recorder--textbox">
+          <p class="recorder--textbox--data"></p>
+        </article>
+        <article id="controls" class="recorder--controls">
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img"
+              src="./asset/undo.png"
+              alt="undo"
+            />
+            <figcaption class="recorder--controls--label">Undo</figcaption>
+          </figure>
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img button__bigger"
+              src="./asset/record.png"
+              alt="record"
+            />
+            <figcaption class="recorder--controls--label">Record</figcaption>
+          </figure>
+          <figure class="recorder--controls--button">
+            <img
+              class="recorder--controls--img"
+              src="./asset/edit.png"
+              alt="edit"
+            />
+            <figcaption class="recorder--controls--label">Edit</figcaption>
+          </figure>
+        </article>
+      </section>
+      <!--
+        Transcription
+
+        A simple box that pre process the output
+      -->
+      <section class="transcription">
+        <article class="transcription--textbox">
+          <textarea
+            class="transcription--textbox--data"
+            name="transcription"
+            id="transcription"
+            disable
+          ></textarea>
+        </article>
+        <article id="transcription" class="transcription--controls">
+          <figure class="transcription--controls--button">
+            <img
+              class="transcription--controls--img"
+              src="./asset/delete.png"
+              alt="delete"
+            />
+            <figcaption class="transcription--controls--label">
+              Delete
+            </figcaption>
+          </figure>
+          <figure class="transcription--controls--button">
+            <img
+              class="transcription--controls--img"
+              src="./asset/check.png"
+              alt="check"
+            />
+            <figcaption class="transcription--controls--label">
+              Check
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <!--
+        Description
+
+        A input to handle with possible mistakes
+      -->
+      <section class="description">
+        <article class="description--wrapper">
+          <p class="description--wrapper--data" id="description"></p>
+        </article>
+      </section>
+      <!--
+        About
+
+        A simple page with some information
+      -->
+      <section class="about">
+        <article class="about--wrapper">
+          <h2 class="about--title">About this project</h2>
+          <blockquote
+            class="about--phrase"
+            cite="https://www.azquotes.com/picture-quotes/quote-the-human-voice-is-the-most-beautiful-instrument-of-all-but-the-most-difficult-to-play-richard-strauss-67-99-01.jpg"
+          >
+            "Human voice is the most beautiful instrument of all, but the most
+            difficult to play"
+          </blockquote>
+          <cite class="about--author">Richard Strauss</cite>
+          <p class="about--content">
+            The scope of this project is to show a simple implementation of a
+            Web Speech API, but using a complex architecture to show some
+            different utilities of web APIs also showing the attendees of this
+            workshop a way to achieve backendless complex functionalities.
+          </p>
+
+          <h3 class="about--subtitle">Aims for this workshop</h3>
+          <ul class="about--list">
+            <li class="about--item">Learn a bit about Web APIs</li>
+            <li class="about--item">Learn about backendless architectures</li>
+            <li class="about--item">
+              Achieve a way to use the Web Speech API trough proxies
+            </li>
+            <li class="about--item">
+              Involve attendees in accessibility common issues
+            </li>
+            <li class="about--item">Show real usable projects</li>
+            <li class="about--item">
+              Show some utilities from OS to solve web common issues under a
+              specific context
+            </li>
+          </ul>
+        </article>
+        <article class="about--wrapper">
+          <h2 class="about--title">Keep in mind</h2>
+          <h3 class="about--subtitle">Usage constrains</h3>
+          <p class="about--content">
+            It's important to know that
+            <a
+              class="about--link"
+              href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Speech_API#browser_compatibility"
+              >Web Speech API</a
+            >
+            is not fully supported, this is an important constraint when you
+            want to add this kind of features, still there other options to have
+            speech utilities, such as
+            <a class="about--link" href="https://webassembly.org/"
+              >Web Assembly</a
+            >, but the complexity associated to "WA" is significantly higher,
+            keeping that in mind; web speech API is still a pretty good way to
+            handle with speech needs
+          </p>
+          <h3 class="about--subtitle">Position in critical path</h3>
+          <p class="about--content">
+            If you need a feature like this, generally your application is
+            "working over wheels", it's never a good idea to start your
+            development critical path having features like what Web Speech API
+            offers. This recommendation comes for experience, but if there's any
+            business characteristic you need to solve using something such as
+            this it might be better the "WA" approach
+          </p>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <article class="credits">
+        <h3 class="credits--title">Credits</h3>
+        <p class="credits--content">
+          Made by:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa"
+            >AndresMpa</a
+          >
+
+          <span class="divider"></span>
+          Project:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://github.com/AndresMpa/when-browser-speaks"
+            >when-browser-speaks</a
+          >
+          <span class="divider"></span>
+          Contact:
+          <a
+            target="_blank"
+            class="credits--content--link"
+            href="https://www.linkedin.com/in/andresmpa/"
+            >Andres M. Prieto Álvarez</a
+          >
+        </p>
+      </article>
+      <article class="credits">
+        <h3 class="credits--title">Thanks to</h3>
+        <div class="credits--content">
+          <p class="credits--content--data">
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/364/settings"
+              >Settings</a
+            >
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/3483/return"
+              >Return</a
+            >
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/12653/microphone"
+              >Microphone</a
+            >
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/5267/edit-property"
+              >Edit Property</a
+            >
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/1942/trash"
+              >Delete</a
+            >
+
+            and
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com/icon/11697/tick-box"
+              >Check</a
+            >
+            icons by
+            <a
+              target="_blank"
+              class="credits--content--link"
+              href="https://icons8.com"
+              >Icons8</a
+            >
+          </p>
+        </div>
+      </article>
+      <article class="sentence">
+        <p class="sentence--label">Think out of code</p>
+      </article>
+    </footer>
+  </body>
+</html>

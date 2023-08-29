@@ -1,0 +1,26 @@
+@import "../basic/colorPalette";
+@import "../basic/fonts";
+
+@mixin tooltip($left-value, $right-value) {
+  visibility: hidden;
+
+  margin-left: -60px;
+  padding: 5px 0;
+  width: 120px;
+
+  background-color: $background;
+  font-family: $font-text;
+  text-align: center;
+  font-size: 16px;
+  color: $letter;
+
+  position: absolute;
+  right: $right-value;
+  left: $left-value;
+  top: 8px;
+
+  z-index: 1;
+
+  opacity: 0;
+  transition: opacity 1s;
+}

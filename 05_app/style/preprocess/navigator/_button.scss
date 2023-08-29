@@ -1,0 +1,47 @@
+@import "../basic/breackPoints";
+@import "../basic/fonts";
+@import "../decoration";
+
+.button {
+  @include border($letter);
+
+  position: relative;
+
+  padding: 0px 15px;
+  margin: 0px 15px;
+
+  background: none;
+
+  cursor: pointer;
+  .button--setting {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    .button--setting--image {
+      height: 20px;
+      width: 20px;
+    }
+    .button--setting--label {
+      margin-right: 5px;
+    }
+  }
+  .tooltiptext {
+    @include border;
+    @include tooltip(none, 110%);
+  }
+}
+
+@media (max-width: $layout-breakpoint-medium) {
+  .button {
+    .button--setting {
+      .button--setting--label {
+        display: none;
+      }
+    }
+
+    &:hover .tooltiptext {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

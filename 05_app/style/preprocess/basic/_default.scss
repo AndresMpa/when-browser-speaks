@@ -1,0 +1,39 @@
+@import "colorPalette";
+@import "fonts";
+
+* {
+  margin: 0%;
+  padding: 0%;
+  color: $letter;
+  overflow-anchor: none;
+  font-family: $font-text;
+}
+
+body {
+  background: $background;
+}
+
+ul,
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: $links;
+}
+
+.divider {
+  display: block;
+}
+
+::-moz-selection {
+  color: $letter;
+  background: $details;
+}
+
+::selection {
+  color: $letter;
+  background: $details;
+}
